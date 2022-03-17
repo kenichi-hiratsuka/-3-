@@ -1,10 +1,10 @@
 <h1>投稿一覧</h1>
 
-<%= link_to list.title, list_path(list.id) %>
+<% @lists.each do |list| %>
 
   <p>タイトル</p>
   <span>
-    <%= link_to list.title, "/lists/#{list.id}" %>
+    <%= link_to list.title, list_path(list.id) %>  
   </span>
   
 <% end %>
